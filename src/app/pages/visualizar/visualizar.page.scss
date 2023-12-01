@@ -1,32 +1,27 @@
-/* Header */
-.header-card{
+.header-card {
     max-width: 400px;
     margin: 0 auto;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
-
-/*Footer */
-ion-footer {
-    background-color: #333; 
-    color: white; 
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    padding: 20px; 
-    left: -30px;  
+.custom-background {
+    background: linear-gradient(to bottom, #1A1A1A, #00377b, #FFB800);
+    color: white;
+    height: 100vh; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
-  
-.footer-content {
+.no-asistencias-message {
+    background-color: #f44336;
+    color: #fff; 
     padding: 10px;
-}
-  
-ion-img {
-    width: 110px; 
-    height: auto; 
-}
- 
+    border-radius: 5px;
+    text-align: center;
+    margin-top: 10px;
+  }
 
 
   

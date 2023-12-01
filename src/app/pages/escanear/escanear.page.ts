@@ -51,53 +51,6 @@ export class EscanearPage implements OnInit {
     this.capturedImage = image.webPath;
   }
       
-/*   async scan() {
-  try {
-    const resultadoQr = (await BarcodeScanner.scan()).code;
-
-    if (resultadoQr) {
-      let infoQr;
-
-      try {
-        infoQr = JSON.parse(resultadoQr);
-
-        if (infoQr) {
-          if (
-            infoQr.asignatura &&
-            infoQr.docente &&
-            infoQr.fecha &&
-            infoQr.hora &&
-            infoQr.leccion &&
-            infoQr.sala &&
-            infoQr.seccion
-          ) {
-            const nuevaAsistencia: Asistencia = {
-              asignatura: infoQr.asignatura,
-              docente: infoQr.docente,
-              fecha: infoQr.fecha,
-              hora: infoQr.hora,
-              leccion: infoQr.leccion,
-              sala: infoQr.sala,
-              seccion: infoQr.seccion,
-            };
-
-            this.asistenciaService.guardarAsistencia([nuevaAsistencia]);
-
-            const parametros = { dataQr: infoQr };
-            this.helper.showModal(resultadoQr, parametros);
-            this.router.navigate(['/asistencia']);
-          } else {
-            console.error('El código QR no tiene las propiedades necesarias.');
-          }
-        }
-      } catch (error) {
-        console.error('Error al parsear el código QR como JSON:', error);
-      }
-    }
-  } catch (error) {
-    console.error('Error al escanear el código QR:', error);
-  }
-}  */
 
 async scan() {
   try {
@@ -129,7 +82,7 @@ async scan() {
               seccion: infoQr.seccion,
             };
 
-            // No necesitas un array aquí, simplemente guarda la asistencia
+            
             this.asistenciaService.guardarAsistencia(nuevaAsistencia);
 
             const parametros = { dataQr: infoQr };
